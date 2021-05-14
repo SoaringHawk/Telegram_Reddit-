@@ -10,7 +10,7 @@ class notification(object):
 
 		subreddit = reddit.subreddit('Jobs4Bitcoins+forhire')
 		hot_thread = subreddit.new(limit=8)
-		keywords = ['python', 'Python', 'Developer', 'Javascript', 'javascript', 'Script', 'script',  'Scraper','Webscraper', 'scraper','webscraper', 'Telegram bot', 'telegram bot', 'bot', 'Bot','raffle bot', 'Raffle bot', 'Reddit bot', 'reddit bot']
+		keywords = ['python', 'Python', 'Developer', 'Javascript', 'javascript', 'Script', 'script',  'Scraper','Webscraper', 'scraper','webscraper', 'Telegram bot', 'telegram bot', 'bot', 'Bot','website','web app', 'django', 'full stack', 'react', 'reactjs', 'Reddit bot', 'reddit bot']
 		for sub in hot_thread:
 			if sub.stickied == False:
 				sub = sub.title
@@ -107,7 +107,7 @@ class notification(object):
 				csv_file = open('seen_data', 'w')
 
 	def send_notification(article_name):
-		TOKEN = '903078328:AAHAhrCbAEZrsD42yKaCe-w-6ln8KVMEBh0'
+		TOKEN = '903078328:AAGHPU6Xt8jYEa1m8ExOVneTIsurh80Tal4'
 		BASE_TELEGRAM_URL = 'https://api.telegram.org/bot{}'.format(TOKEN)
 		UPDATE_TELEGRAM_URL = 'https://api.telegram.org/bot{}/getUpdates'.format(TOKEN)
 		TELEGRAM_SEND_MESSAGE_URL = BASE_TELEGRAM_URL + '/sendMessage?chat_id={}&text={}'
